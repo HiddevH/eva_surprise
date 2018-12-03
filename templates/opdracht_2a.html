@@ -21,13 +21,11 @@
       {% if error %}
         <p class=error><strong>Error:</strong> {{ error }}
       {% endif %}
-       <h2 class="text-black mx-auto mt-2 mb-5">Heel goed!<br>
-         Het missende getal op de brief is <b>7</b>. <br>
-         Ga naar <a href="https://www.google.com/maps" target="_blank">Google Maps</a><br>
-         En vul de code in.
-             <!-- C7FQ+94 -->
+       <h2 class="text-black mx-auto mt-2 mb-5">In welke stad kwam je terecht?<br>
        </h2>
-       <a href="{{ url_for('opdracht_2a') }}" class="btn btn-primary js-scroll-trigger">Volgende</a>
+      <form method="POST">
+      <input name="answer2">
+      <input type="submit">
 </form>
     </div>
   </div>
