@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Eva's Surprise - Finish</title>
+    <title>Eva's Surprise - Opdr 3</title>
     <meta name="author" content="Hidde v Heijst">
 
     <!-- Styles -->
@@ -21,13 +21,16 @@
       {% if error %}
         <p class=error><strong>Error:</strong> {{ error }}
       {% endif %}
-       <h2 class="text-black mx-auto mt-2 mb-5"> Het was misschien even zweten, <br>
-               Maar als je niet door deze vragen kwam <br> 
-               zou je geen Wiskunde juf heten! <br>
-               Het zwoegen is klaar,<br>
-               Op zoek naar je cadeautje dan maar!
+       <h2 class="text-black mx-auto mt-2 mb-5">  
+         Bijna op het eind,<br>
+         Je bent toch niet al weggekwijnd?<br>
+         Zoek bij het land <br>
+         En jaar <br>
+         Geef het getal wat daar staat maar:<br>
        </h2>
-       <a href="{{ url_for('cadeau') }}" class="btn btn-primary js-scroll-trigger">Cadeautje!</a>
+      <form method="POST">
+      <input name="answer4">
+      <input type="submit">
 </form>
     </div>
   </div>

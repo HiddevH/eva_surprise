@@ -34,29 +34,43 @@ def opdracht_2():
 def opdracht_2a():
     # Check if valid answer
     if request.method == 'POST':
-        if request.form['answer2'].lower() != 'madrid':
+        if request.form['answer2'].lower() != 'spanje':
             error = 'Fout antwoord! Probeer opnieuw.'
         else:
-            return redirect(url_for('gapminder'))
+            return redirect(url_for('opdracht_3'))
         return render_template('opdracht_2a.html', error=error)
 
     return render_template('opdracht_2a.html')
 
-@app.route('/gapminder/')
-def gapminder():
-    return render_template('gapminder.html')
 
 @app.route('/opdracht3/', methods=['GET', 'POST'])
 def opdracht_3():
     # Check if valid answer
     if request.method == 'POST':
-        if request.form['answer3'].lower() != 'japan':
+        if request.form['answer3'] != '1948':
             error = 'Fout antwoord! Probeer opnieuw.'
         else:
-            return redirect(url_for('finish'))
+            return redirect(url_for('opdracht_4'))
         return render_template('opdracht_3.html', error=error)
 
     return render_template('opdracht_3.html')
+
+@app.route('/opdracht4/')
+def opdracht_4():
+    return render_template('opdracht_4.html')
+
+@app.route('/opdracht4a/', methods=['GET', 'POST'])
+def opdracht_4a():
+    # Check if valid answer
+    if request.method == 'POST':
+        if request.form['answer4'] != '61':
+            error = 'Fout antwoord! Probeer opnieuw.'
+        else:
+            return redirect(url_for('finish'))
+        return render_template('opdracht_4a.html', error=error)
+
+    return render_template('opdracht_4a.html')
+
 
 @app.route('/finish/')
 def finish():
