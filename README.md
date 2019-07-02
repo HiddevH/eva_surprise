@@ -3,5 +3,6 @@ This project consists of a Flask webapp written in Python, where the enduser has
 <br><br>
 To upload the app to GCloud AppEngine, run the following command from within the root directory of your project where the app.yaml file is located:
 
-gcloud app deploy
+`gcloud app deploy`<br>
+
 (you'll need gcloud CLI)
